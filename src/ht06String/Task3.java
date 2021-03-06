@@ -8,7 +8,6 @@ public class Task3 {
     public static void main(String[] args) {
         final String DELIMITER = ":";
         final String PREFIX = "-";
-
         final String regex = "\\b\\w+";
         final String string = "banana - a. bax, c, d  e";
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
