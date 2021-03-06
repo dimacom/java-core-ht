@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 public class Task3 {
 
     public static void main(String[] args) {
+        final String DELIMITER = ":";
+        final String PREFIX = "-";
 
         final String regex = "\\b\\w+";
         final String string = "banana - a. bax, c, d  e";
@@ -14,8 +16,8 @@ public class Task3 {
         int counter = 0;
         while (matcher.find()) {
             counter++;
-            if (counter == 1) System.out.println(matcher.group(0) + ":");
-            if (counter != 1) System.out.println("- " + matcher.group(0));
+            if (counter == 1) System.out.println(matcher.group(0) + DELIMITER);
+            if (counter != 1) System.out.println(PREFIX + matcher.group(0));
         }
     }
 }
