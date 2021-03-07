@@ -9,14 +9,14 @@ public class Task5 {
         String string = "I'm gonna make a change of once in my life it's gonna feel real good gonna make a difference";
         String[] words = string.split(" ");
         int maxLength = 0;
-        String allLongWords = "";
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() > maxLength) maxLength = words[i].length();
+        StringBuilder allLongWords = new StringBuilder();
+        for (String word : words) {
+            if (word.length() > maxLength) maxLength = word.length();
         }
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() == maxLength) allLongWords += words[i] + " ";
+        for (String word : words) {
+            if (word.length() == maxLength) allLongWords.append(word).append(" ");
         }
-        String[] arrayAllLongWords = allLongWords.split(" ");
+        String[] arrayAllLongWords = allLongWords.toString().split(" ");
         Arrays.sort(arrayAllLongWords);
 
         System.out.println(arrayAllLongWords[0]);
