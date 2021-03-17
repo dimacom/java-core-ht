@@ -1,4 +1,4 @@
-package ht09Class.Task1;
+package ht09Class.task1;
 
 import java.util.Arrays;
 

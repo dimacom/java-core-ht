@@ -1,4 +1,4 @@
-package ht09Class.Task1;
+package ht09Class.task1;
 
 public class App {
     public static void main(String[] args) {
