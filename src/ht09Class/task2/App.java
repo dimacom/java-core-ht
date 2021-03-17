@@ -13,6 +13,5 @@ public class App {
             if (animal == null) continue;
             animal.say();
         }
-
     }
 }
