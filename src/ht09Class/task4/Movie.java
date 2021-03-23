@@ -8,6 +8,7 @@ public class Movie {
     public Movie(String title, int year) {
         this.title = title;
         this.year = year;
+        this.desc = "";
     }
 
     public Movie(String title, String desc, int year) {
