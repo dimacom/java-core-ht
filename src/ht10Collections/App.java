@@ -1,14 +1,18 @@
 package ht10Collections;
 
+import ht10Collections.person.Person;
+
 import java.util.HashMap;
 import java.util.Map;
 
+import static ht10Collections.person.Season.SUMMER;
 import static ht10Collections.Task3.findPeople;
+import static ht10Collections.Task4.peopleBirthdayWithoutSeason;
 import static java.time.LocalDate.of;
 
 public class App {
     public static void main(String[] args) {
-        Map<Integer,Person> people = new HashMap<>();
+        Map<Integer, Person> people = new HashMap<>();
         people.put(Person.id ,new Person("Cherry","Cancellario", of(2010, 1, 3)));
         people.put(Person.id ,new Person("Jodie","Woodburn", of(2011, 12, 30)));
         people.put(Person.id ,new Person("Randolf","Kelshaw", of(2010, 4, 20)));
@@ -22,5 +26,7 @@ public class App {
 
         findPeople("Woodburn",people);  //Task3
         findPeople("Kelshaw","Dall",people);  //Task3
+
+        peopleBirthdayWithoutSeason(SUMMER,people); //Task4
     }
 }

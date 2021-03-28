@@ -1,4 +1,4 @@
-package ht10Collections;
+package ht10Collections.person;
 
 import java.time.LocalDate;
 

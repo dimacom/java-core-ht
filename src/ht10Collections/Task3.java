@@ -1,5 +1,7 @@
 package ht10Collections;
 
+import ht10Collections.person.Person;
+
 import java.util.Map;
 
 public class Task3 {
