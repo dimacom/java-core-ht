@@ -99,7 +99,7 @@ public class Person implements Comparable<Person> {
     }
 
     public String toString() {
-        return "Person(idPerson=" + this.getIdPerson() + ", name=" + this.getName() + ", lastName=" + this.getLastName() + ", birthday=" + this.getBirthday() + ", salary=" + this.getSalary() +", id="+ this.getIdPerson()+ ")";
+        return "Person(idPerson=" + this.getIdPerson() + ", name=" + this.getName() + ", lastName=" + this.getLastName() + ", birthday=" + this.getBirthday() + ", salary=" + this.getSalary() +", id="+ this.getIdPerson()+ ")\n";
     }
 
     @Override

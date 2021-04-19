@@ -25,7 +25,7 @@ public class Task1 {
             return true;
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
+            return false;
         }
-        return false;
     }
 }

@@ -1,9 +1,9 @@
 package ht10Collections;
 
 import ht10Collections.person.Person;
+import ht10Collections.person.Season;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static ht10Collections.Task4.peopleBirthdayWithoutSeason;
 import static ht10Collections.Task5.deletePersonDuplicateName;

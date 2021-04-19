@@ -16,7 +16,7 @@ public class Task5 {
             return reader.readLine();
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
+            return "not found ";
         }
-        return "not found ";
     }
 }
