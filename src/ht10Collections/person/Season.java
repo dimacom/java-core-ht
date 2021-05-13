@@ -1,8 +1,5 @@
 package ht10Collections.person;
 
-import lombok.Getter;
-
-
 public enum Season {
     WINTER("12_1_2"),
     SPRING("3_4_5"),
