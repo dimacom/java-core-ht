@@ -8,7 +8,7 @@ import static ht12streamapi.Utils.getStudent;
 
 public class Task3 {
     public static void main(String[] args) {
-        List<Student> students = getStudent(personList, x -> x.getCourse() > 3 && LocalDate.now().getYear() - x.getBirthday().getYear() > 22);
+        List<Student> students = getStudent(personList, student -> student.getCourse() > 3 && LocalDate.now().getYear() - student.getBirthday().getYear() > 22);
         System.out.println(students);
     }
 }

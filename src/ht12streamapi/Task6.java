@@ -8,10 +8,10 @@ import static ht12streamapi.Utils.getEmployee;
 public class Task6 {
     public static void main(String[] args) {
         List<Employee> employees = getEmployee(personList);
-        double johnSum = employees.stream()
+        double johnSumSalary = employees.stream()
                 .filter(employee -> employee.getFirstName().equals("John"))
                 .peek(System.out::println)
-                .mapToDouble(e -> e.getSalary().doubleValue()).sum();
-        System.out.println(johnSum);
+                .mapToDouble(employee -> employee.getSalary().doubleValue()).sum();
+        System.out.println(johnSumSalary);
     }
 }

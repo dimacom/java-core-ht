@@ -38,11 +38,21 @@ public class Utils {
         return people;
     }
 
-    static  List<Person> getPerson(List<Person> person, Predicate<Person> predicate){
-      return   person.stream()
+    @SafeVarargs
+    static List<Person> getPerson(List<? extends Person>... people) {
+        final List<Person> result = new ArrayList<>();
+        for (List<? extends Person> person : people) {
+            result.addAll(person);
+        }
+        return result;
+    }
+
+    static List<Person> getPerson(List<Person> person, Predicate<Person> predicate) {
+        return person.stream()
                 .filter(predicate)
                 .collect(Collectors.toList());
     }
+
     static List<Student> getStudent(List<Person> personList) {
         return personList.stream()
                 .map(x -> new Student(x.getLastName(), x.getFirstName(), x.getBirthday(), String.valueOf(112000 + rnd.nextInt(4)), rnd.nextInt(5)))
@@ -50,7 +60,6 @@ public class Utils {
     }
 
     static List<Student> getStudent(List<Person> personList, Predicate<Student> predicate) {
-        Random rnd = new Random();
         return personList.stream()
                 .map(x -> new Student(x.getLastName(), x.getFirstName(), x.getBirthday(), String.valueOf(112000 + rnd.nextInt(4)), rnd.nextInt(5)))
                 .filter(predicate)
@@ -63,7 +72,8 @@ public class Utils {
                 .map(x -> new Employee(x.getFirstName(), x.getLastName(), x.getBirthday(), BigDecimal.valueOf(rnd.nextDouble() * 4000), Positions.valueOf(positions[rnd.nextInt(4)])))
                 .collect(Collectors.toList());
     }
-    static List<Employee> getEmployee(List<Person> personList, Predicate<Employee>predicate) {
+
+    static List<Employee> getEmployee(List<Person> personList, Predicate<Employee> predicate) {
         String[] positions = {"ENGINEER", "ELECTRICIAN", "MECHANIC", "LABORATORY_ASSISTANT"};
         return personList.stream()
                 .map(x -> new Employee(x.getFirstName(), x.getLastName(), x.getBirthday(), BigDecimal.valueOf(rnd.nextDouble() * 4000), Positions.valueOf(positions[rnd.nextInt(4)])))
